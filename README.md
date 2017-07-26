@@ -1,5 +1,4 @@
-#b2b-pc-4.0
-dev
+
 ```javascript
 npm install
 npm install supervisor -g
@@ -12,7 +11,7 @@ gulp build
 npm start
 ```
 #启动
-localhost://8080
+http://localhost:8888/?shopId=547de083067a4b04afb6ae3c48186688
 
 
 #项目结构
@@ -46,7 +45,9 @@ localhost://8080
         |-- views
             |-- components             // 主题1的公共组件部分
             ...                        // 主题1其他模块页面
-    ...        
+ |-- gulpfile.js                       // gulp配置
+ |-- webpack.conf.js 
         
     
 ```
+这里没有将webpack配置文件分成开发和生产环境2份，会导致一些优化问题
