@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    block css
+    script.
+      var isDomain = document.domain;
+      if (isDomain.indexOf('#{domain}') > -1) {
+        document.domain = '#{domain}';
+      }
+      window.apiHost = '#{apiHost}';
+      var theme = '#{theme}'
+      var version = '#{version}'
+      var shopId = '#{shopId}';
+      // 获取来源
+      // seller 端编辑 plat = 2
+      var plat = 0;
+      if (self.name.indexOf('app_runner_fb') > -1) {
+        plat = 1;
+      }
+      if (self.name.indexOf('buyer-editor') > -1) {
+        plat = 2;
+      }
+      if (self.name.indexOf('buyer-preview') > -1) {
+        plat = 3;
+      }
+      if (self.name.indexOf('seller-preview') > -1) {
+        plat = 4;
+      }
+  body
+    block content
+    block scripts

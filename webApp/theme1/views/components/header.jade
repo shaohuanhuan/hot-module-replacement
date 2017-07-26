@@ -1,0 +1,97 @@
+mixin line(className)
+  if(className)
+    li.line-li.hidden-xs(class='#{className}')
+      span.line
+  else
+    li.line-li.hidden-xs
+      span.line
+.header
+  .top.container
+    //- img.logo-img#logo-img.logo-default
+    div.logo-img#logo-img.logo-default
+    .social-container.pull-right.hidden-xs.icon-top
+      //i.glyphicon.glyphicon-facebook
+      //i.glyphicon.glyphicon-linkedIn
+      //i.glyphicon.glyphicon-twitter
+  nav.navbar.bottom.navbar-default
+    .container.container-no-padding
+      .row.no-margin
+        .navbar-header
+          button.navbar-toggle.pull-left.collapsed(type="button", data-toggle="collapse", data-target="#navbar-collapse", aria-expanded="false")
+            span.menu-bar
+              span.menu-open.glyphicon.glyphicon-menu
+              span.menu-close.glyphicon.glyphicon-cancel
+            span.menu-text
+              | MENU
+          .visible-xs
+            .input-group.search-input.mbSearch
+              input.form-control.input-blue(type='input',placeholder='search...')
+              span.input-group-addon.search-btn
+                i.glyphicon.glyphicon-search
+        #navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.col-sm-12
+            if(fb !== '1')
+              if(title === 'home')
+                li.active
+                  a(href="/?shopId=#{shopId}" class='nav-a') HOME
+              else
+                li
+                  a(href="/?shopId=#{shopId}" class='nav-a') HOME
+              +line
+            if(title === 'products')
+              li.drop-menu.active
+                a(href='/products?shopId=#{shopId}&fb=#{fb}')
+                  | PRODUCTS
+                  span.caret.hidden-xs
+            else
+              li.drop-menu
+                a(href='/products?shopId=#{shopId}&fb=#{fb}')
+                  | PRODUCTS
+                  span.caret.hidden-xs
+            +line
+            if(fb !== '1')
+              if(title === 'company profile')
+                li.active.kkk
+                  a(class='nav-a',href='/profile?shopId=#{shopId}') COMPANY PROFILE
+              else
+                li
+                  a(class='nav-a',href='/profile?shopId=#{shopId}') COMPANY PROFILE
+              //li#company-p
+              //  a(class='nav-a',href='/profile?shopId=#{shopId}') COMPANY PROFILE
+              +line
+              if(title === 'contact us')
+                li.active
+                  a(class='nav-a',href='/contacts?shopId=#{shopId}') CONTACT US
+              else
+                li
+                  a(class='nav-a',href='/contacts?shopId=#{shopId}') CONTACT US
+              //li#contacts
+              //  a(class='nav-a',href='/contacts?shopId=#{shopId}') CONTACTS
+              +line
+            li.hidden-xs
+              a.search-bar.glyphicon.glyphicon-search
+            li.hidden-search.animated.zoomIn.col-sm-9.hidden-xs
+              .input-group
+                i.glyphicon.glyphicon-search.search-btn
+                input.form-control#input-down(type='input',placeholder='search')
+                span.input-group-addon.close-input
+                  | &times;
+            li.pull-right.user-li
+              span.user-opration
+                i.glyphicon.glyphicon-user.hidden-xs
+                a(href='/users/login?shopId=#{shopId}') SIGN IN
+                if(fb !== '1')
+                  span OR
+                  a(href='/users/register?shopId=#{shopId}') SIGN UP
+              span.user-loged
+                i.glyphicon.glyphicon-user.hidden-xs
+                a(href='javascript:;').username
+                if(fb !== '1')
+                  span |
+                  a(href='#{apiHost}/buyer/logout') SIGN OUT
+            +line('pull-right')
+            li#xs-list.visible-xs
+              //a.social-container
+              //  i.glyphicon.glyphicon-facebook
+              //  i.glyphicon.glyphicon-linkedIn
+              //  i.glyphicon.glyphicon-twitter

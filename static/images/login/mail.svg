@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 290 113" style="enable-background:new 0 0 290 113;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFCE54;}
+	.st1{fill:#F7BB43;}
+	.st2{fill:#5D9BEC;}
+	.st3{fill:#FFFFFF;}
+	.st4{filter:url(#Adobe_OpacityMaskFilter);}
+	.st5{mask:url(#mask-2);fill:#FFFFFF;}
+	.st6{fill:#558FDB;}
+	.st7{fill:none;stroke:#D6ECF9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st8{fill:#D6ECF9;}
+	.st9{fill:none;stroke:#D6ECF9;stroke-width:2;}
+	.st10{filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st11{mask:url(#mask-4);fill:#FEDD8C;}
+</style>
+<title>Page 1</title>
+<desc>Created with Sketch.</desc>
+<g id="Group-10" transform="translate(77.890467, 1.177728)">
+	<path id="Fill-1" class="st0" d="M111.2,109.8H8.9c-4.4,0-7.9-3.5-7.9-7.9v-59c0-3.8,1.9-7.4,5.2-9.5L57.7-0.1
+		c1.4-0.9,3.3-0.9,4.7,0l51.5,33.5c3.2,2.1,5.2,5.7,5.2,9.5v59C119.1,106.2,115.5,109.8,111.2,109.8"/>
+	<g id="Group-5" transform="translate(3.651116, 0.000000)">
+		<path id="Fill-3" class="st1" d="M57,82.4L2.7,39.7c-2-1.6-1.9-4.7,0.3-6.1l51.6-34c1-0.7,2.3-0.7,3.3,0l50.8,33.2
+			c2.2,1.4,2.3,4.5,0.4,6.1L57,82.4z"/>
+	</g>
+	<path id="Fill-6" class="st2" d="M74,70.8L48.5,72L9.5,42.8V18.9c0-2.9,2.4-5.3,5.3-5.3h89.3c2.9,0,5.3,2.4,5.3,5.3v22.8L74,70.8z"
+		/>
+	<path id="Fill-8" class="st3" d="M44.1,39.8l4-2.4l7.1,7.4c0,0,10.8-9.1,23.2-14.5l1.1,1.9c0,0-14.6,9.4-23.5,23.3L44.1,39.8z"/>
+</g>
+<g id="Group-13" transform="translate(120.486815, 31.603692)">
+	<g id="Clip-12">
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-1.7" y="-6.1" width="39.9" height="35.3">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="-1.7" y="-6.1" width="39.9" height="35.3" id="mask-2">
+		<g class="st4">
+			<path id="path-1" class="st3" d="M12.6,14.4L5.5,7l-4,2.4l11.9,15.7C22.3,11.2,36.9,1.8,36.9,1.8l-1.1-1.9
+				C23.4,5.3,12.6,14.4,12.6,14.4z"/>
+		</g>
+	</mask>
+	<polygon id="Fill-11" class="st5" points="-1.7,23.8 33.7,29.2 38.3,-0.7 2.9,-6.1 	"/>
+</g>
+<g id="Group-33" transform="translate(0.000000, 13.348114)">
+	<polygon id="Fill-17" class="st6" points="87.4,30.6 123.1,57.4 128.6,53.9 	"/>
+	<polygon id="Fill-19" class="st6" points="186,30.6 153.1,57.4 147,53.8 	"/>
+	<polygon id="Stroke-21" class="st7" points="278.5,13 278.5,-0.4 288.8,6.3 	"/>
+	<path id="Fill-23" class="st8" d="M245.2,23.9l3-3c0.7-0.7,0.7-1.9,0-2.6c-0.7-0.7-1.9-0.7-2.6,0l-3,3l-3-3c-0.7-0.7-1.9-0.7-2.6,0
+		c-0.7,0.7-0.7,1.9,0,2.6l3,3l-3,3c-0.7,0.7-0.7,1.9,0,2.6c0.7,0.7,1.9,0.7,2.6,0l3-3l3,3c0.7,0.7,1.9,0.7,2.6,0
+		c0.7-0.7,0.7-1.9,0-2.6L245.2,23.9z"/>
+	<path id="Fill-25" class="st8" d="M52.1,37.9h4.3c1,0,1.8-0.8,1.8-1.8c0-1-0.8-1.8-1.8-1.8h-4.3V30c0-1-0.8-1.8-1.8-1.8
+		c-1,0-1.8,0.8-1.8,1.8v4.3h-4.3c-1,0-1.8,0.8-1.8,1.8c0,1,0.8,1.8,1.8,1.8h4.3v4.3c0,1,0.8,1.8,1.8,1.8c1,0,1.8-0.8,1.8-1.8V37.9z"
+		/>
+	<path id="Fill-27" class="st8" d="M266.3,56.8c0,1.7-1.4,3-3,3c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3C265,53.8,266.3,55.1,266.3,56.8"
+		/>
+	<path id="Fill-29" class="st8" d="M36.3,56.8c0,1.7-1.4,3-3,3c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3C34.9,53.8,36.3,55.1,36.3,56.8"/>
+	<path id="Stroke-31" class="st9" d="M12,20.3c0,3-2.5,5.5-5.5,5.5S1,23.3,1,20.3s2.5-5.5,5.5-5.5S12,17.3,12,20.3z"/>
+</g>
+<g id="Group-16" transform="translate(76.673428, 63.246694)">
+	<g id="Clip-15">
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="2.2" y="-0.2" width="118.1" height="49.1">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="2.2" y="-0.2" width="118.1" height="49.1" id="mask-4">
+		<g class="st10">
+			<polygon id="path-3" class="st3" points="2.2,48.9 120.3,48.9 120.3,-0.2 2.2,-0.2 			"/>
+		</g>
+	</mask>
+	<path id="Fill-14" class="st11" d="M2.2,35.6L56.5,1.1c2.9-1.8,6.6-1.8,9.4,0l54.3,34.5v3.5c0,5.4-4.4,9.8-9.8,9.8H12
+		c-5.4,0-9.8-4.4-9.8-9.8V35.6z"/>
+</g>
+</svg>

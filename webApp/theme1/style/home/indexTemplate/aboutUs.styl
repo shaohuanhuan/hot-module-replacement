@@ -1,0 +1,153 @@
+.aboutUs-container
+  margin-top 150px
+  padding-left 0
+  position relative
+  width 100%
+  .padding-10
+    padding-top 10px
+  .margin-30
+    margin-top 30px
+  .backTop
+    color #d8d8d8
+    position fixed
+    right 200px
+    bottom 320px
+    cursor pointer
+    font-size 40px
+    z-index 9999
+    opacity 1
+    visibility visible
+    transition opacity .3s 0s, visibility 0s .3s
+    -webkit-transition opacity .3s 0s, visibility 0s .3s
+    -moz-transition opacity .3s 0s, visibility 0s .3s
+  .backTop.btp-hidden
+    opacity 0
+    visibility hidden
+    transition opacity 0.3s
+  .backTop:hover
+    color: #359af6
+  .aboutUs
+    background $whiteOO
+    .aboutUs-img
+      padding-bottom 30px
+      padding-right 0
+      background $whiteOO
+      .title
+        text-align center
+        position relative
+        padding-left 20px
+        background $white
+        font-size 30px
+        line-height 70px
+        .title-line
+          left calc(50% - 20px)
+          position absolute
+          display inline-block
+          width 40px
+          height 4px
+          background $mainColor
+      .ab-img-container
+        width 100%
+        padding-bottom 50%
+        position relative
+        overflow hidden
+      .default-color
+        background-color #d8d8d8
+        img
+          position absolute
+          top 0
+          width 100%
+          height 100%
+        .df-img
+          //position absolute
+          //top 23%
+          //left 23%
+          //width 45%
+          //height 45%
+        .img-hold
+          position absolute
+          top:0
+          width:100%
+          height 100%
+          background #F2F2F2
+    .discrible-container
+      padding 0
+      .title
+        font-family HelveticaNeueLTPro-Bd,sans-serif
+        font-weight bold
+        position relative
+        padding-left 14px
+        background $white
+        font-size 30px
+        color #000
+        line-height 95px
+        .title-line
+          left 60px
+          position absolute
+          display inline-block
+          width 40px
+          height 5px
+          background $mainColor
+      .discrible
+        padding 8% 30% 5% 8%
+        .jump-to
+          text-decoration: none
+          .learn-btn
+            width 140px
+            height 40px
+            line-height 40px
+            .icon-arror
+              opacity 0.6
+              font-size 12px
+              margin-right -12px
+        .discrible-text
+          max-height 260px
+          overflow hidden
+          text-overflow ellipsis
+          display -webkit-box
+          -webkit-box-orient vertical
+          -webkit-line-clamp 11
+          line-height 24px
+          color $blackO
+          //word-break break-all
+          p{
+            height 20px
+            background #E8E8E8
+            border-radius 10px
+            margin:0 0 18px
+          }
+          .half{
+            width:70%
+          }
+        .btn{
+          width: 140px
+          height 46px
+          border-radius 4px
+          background #E8E8E8
+        }
+
+@media screen and (max-width: 768px)
+  .aboutUs-container
+    margin-top 50px
+    .aboutUs
+      .aboutUs-img
+        padding-bottom 0
+        .title
+          font-size 26px
+          padding-left 0
+      .discrible-container
+        .discrible
+          padding 15px 15px 0 30px
+          .btn-blue
+            margin-top 30px
+            margin-left calc(50% - 70px)
+          .btn
+            width: 140px
+            height 46px
+            border-radius 4px
+            background #E8E8E8
+@media screen and (max-width: 992px)
+  .aboutUs-container .aboutUs .discrible-container .discrible
+    .discrible-text
+      max-height 80px
+      -webkit-line-clamp 3

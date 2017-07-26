@@ -1,0 +1,325 @@
+html
+    -webkit-text-size-adjust 100%
+    -ms-text-size-adjust 100%
+    font-size 62.5%
+/*嵌入端*/
+@media screen and (max-width: 820px)
+    html
+        font-size 50%
+@media screen and (max-width: 768px)
+    html
+        font-size 50%
+@font-face 
+  font-family "glyphicon"
+  src url(/thirtyPart/font/iconfont.eot?t=1491897005252)
+  src url(/thirtyPart/font/iconfont.eot?t=1491897005252#iefix) format('embedded-opentype'),
+      url(/thirtyPart/font/iconfont.woff?t=1491897005252) format('woff'),
+      url(/thirtyPart/font/iconfont.ttf?t=1491897005252) format('truetype'),
+      url(/thirtyPart/font/iconfont.svg?t=1491897005252#iconfont) format('svg')
+.center-all
+  text-align center
+.display-all
+  display inline-block
+.default-up
+  margin-top 12px
+.default-check
+  background #fff
+.glyphicon,[class^="glyphicon-"], [class*=" glyphicon-"]
+  font-family "glyphicon" !important
+  font-size 16px
+  font-style normal
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+.glyphicon-chevron-left:before
+  content '\e6ab'
+.glyphicon-chevron-right:before
+  content '\e6aa'
+.glyphicon-cart:before
+  content '\e63f'
+.glyphicon-search:before
+  content '\e616'
+.glyphicon-facebook:before
+  content '\e677'
+.glyphicon-twitter:before
+  content '\e67a'
+.glyphicon-linkedIn:before
+  content '\e678'
+.glyphicon-pinterest:before
+  content '\e679'
+.glyphicon-user:before
+  content '\e62a'
+.glyphicon-cancel:before
+  content '\e6a9'
+.glyphicon-menu:before
+  content '\e611'
+.glyphicon-tel:before
+  content '\e6e3'
+.glyphicon-email:before
+  content '\e724'
+.glyphicon-location:before
+  content '\e617'
+.glyphicon-reduce:before
+  content '\e704'
+.glyphicon-plus:before
+  content '\e61c'
+.glyphicon-prev:before
+  content '\e601'
+.glyphicon-next:before
+  content '\e600'
+.glyphicon-dleft:before
+  content '\e65c'
+.glyphicon-dright:before
+  content '\e602'
+ 
+.glyphicon-share:before 
+   content "\e6b4"
+.glyphicon-tishi:before 
+   content "\e6b5"
+    
+.glyphicon-music:before 
+   content "\e6ac"
+   color #807ff4
+.glyphicon-ppt:before 
+   content "\e6b0"
+   color #ff9736
+.glyphicon-excel:before 
+   content "\e6b1"
+   color #7BD12C
+.glyphicon-tex:before 
+   content "\e6b2"
+   color #4794fe
+.glyphicon-shipin:before 
+   content "\e6b3"
+   color #807ff4
+.glyphicon-weizhi:before 
+   content "\e6b6"
+   color #B8C9D7
+.glyphicon-wenjian:before 
+   content "\e6b7"
+   color #FFBA00
+.glyphicon-rar:before 
+   content "\e6b8"
+   color #ffb900
+.glyphicon-word:before 
+   content "\e6ba"
+   color #4894FF
+.glyphicon-pdf:before
+   content "\e68a"
+   color #ff5855
+.glyphicon-edit:before
+  content "\e98a"
+// 提示框
+.glyphicon-tipsuccess:before
+  content '\e6bb'
+  color #87D068
+.glyphicon-tipwarning:before
+  content '\e6b9'
+  color #FFC000
+.glyphicon-tipinfo:before
+  content '\e6bc'
+  color #108EE9
+.glyphicon-ICON:before
+  content '\e67f'
+.glyphicon-404:before
+  content '\e680'
+.glyphicon-Path:before
+  content '\e67e'
+.glyphicon-Pathone:before
+  content '\e61d'
+.glyphicon-back:before
+  content '\e61a'
+.glyphicon-top:before
+  content '\e61e'
+  font-size 40px
+li
+  list-style none
+/*内嵌编辑  蒙层*/
+.iframe-layer{
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+/*404页面*/
+.error_page
+  background #fff
+  background #fff
+  height 500px
+  width 50%
+  position absolute
+  top 50%
+  margin-top -250px
+  left 25%
+  min-width: 580px;
+  .center_model
+    width 100%
+    height 100%
+    margin 0 auto
+    display table
+    text-align center
+    .conent
+      display table-cell
+      vertical-align middle
+      .left
+        width 50%
+        display inline-block
+        text-align right
+        padding-right 27px
+        vertical-align top
+        margin-top 60px
+        .light
+          font-size 180px
+      .right
+        width 50%
+        display inline-block
+        text-align left
+        padding-left 27px
+        .font404
+          font-size 100px
+          color #5488F9
+        .desc
+          margin 0 0
+          font-szie 14px
+          color #333
+          font-weight 600
+        .error
+          margin-top 12px
+          font-size 12px
+          color #b0c1d4
+          .label_desc
+            display inline-block
+            vertical-align top
+          .error_prompt
+            display inline-block
+            margin 0 0
+            li
+              list-style-type disc
+        .back_btn
+          margin-top 20px
+          font-weight 600
+          i
+            margin-left 20px
+            cursor pointer
+// 模板上的下拉选择内容太长
+.select3-styled
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+.select3-options
+  li
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+
+// 商品详情-价格表
+.price-tab
+   .price
+      max-width 100%
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+   em
+     font-style normal
+
+@media screen and (max-width: 480px)
+   div.price-tab
+     p
+       margin-top 20px
+       line-height 25px
+@media screen and (max-width: 320px)
+   div.price-tab
+     .tit
+       width 18%
+       p
+         height 26px
+         // margin-top 15px
+         em
+           display block
+           margin-top -7px
+// 商品详情-属性
+.desc-attr
+  li
+    label
+      width 30%
+    em
+      font-style normal
+    span
+      max-width 51%
+    span,label
+      display inline-block
+      vertical-align top
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+@media screen and (max-width: 480px)
+  .desc-attr
+    ul>li
+      label
+        min-width 0
+// 放大镜
+.magnify-show
+  left 100%
+  margin-left -10px
+.magnify-show > img
+  margin-left 0
+  margin-top 0
+  width 1380px
+  max-height 1380px
+@media screen and (max-width: 1080px)
+  .magnify-show > img
+    width 1092px!important
+    max-height 1092px!important
+@media screen and (max-width: 938px)
+  .magnify-show > img
+    width 816px!important
+    max-height 816px!important
+@media screen and (max-width: 768px)
+    .carousel-control
+       display none
+    .magnify-begin,.magnify-show
+       display none !important
+    .left-pic .carousel.img-box
+        height 100%
+        padding-bottom 0
+@media screen and (max-width: 480px)
+    #buy-now
+      display none
+
+// 商品标题 单词不分离
+.container
+  .right-pic h1 span
+    word-break normal
+
+// 商品详情富文本
+div.desc-img
+  word-break break-all
+  li
+    list-style inherit
+  table
+    width 100%
+    border-top 1px solid #e0e0e0
+    border-left 1px solid #e0e0e0
+  table th, table td
+    padding 5px
+    text-align inherit
+    border-right 1px solid #e0e0e0
+    border-bottom 1px solid #e0e0e0
+  table th
+    background #f9f9f9
+.desc-attr
+  li
+    label
+      color #999
+    span
+      color #333
+div.desc-attr ul
+  margin 30px 10px 20px 0
+  li label
+    width 44%
+// @media (min-width: 992px)
+//   div.desc-attr ul
+//     margin 0

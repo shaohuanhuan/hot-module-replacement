@@ -1,0 +1,18 @@
+.carousel-container
+  div.banner-loading
+    .img-container
+  div#carousel-banner.carousel.slide(data-ride="carousel")
+    ol.carousel-indicators
+      //li.active(data-target="#carousel-banner",data-slide-to="0")
+      //li.only-one.ll(data-target="#carousel-banner",data-slide-to="1")
+    .carousel-inner#carousel-inner(role="listbox")
+      .item.active
+        img(src="/images/Group3.jpg",alt="")
+      //  .carousel-caption 吃舅啊大饭
+      //.item
+      //  img(src="images/2.png",alt="")
+      //  .carousel-caption 吃馒头啊包子
+    a.left.carousel-control(href="#carousel-banner",role="button",data-slide="prev")
+      span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+    a.right.carousel-control(href="#carousel-banner",role="button",data-slide="next")
+      span.glyphicon.glyphicon-chevron-right(aria-hidden="true")

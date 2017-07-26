@@ -1,0 +1,24 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+block content
+  .container
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        .tip-center
+          img(src="/images/login/mail.svg",class="success-icon")
+        .success-title Help is on the way
+        .tip-center We`re combing through out records to find the HubSpot
+        .tip-center-no-margin account for 
+          span.color-yellow.mail-name
+        .tip-center One we find a match, you`ll get an email with further instructions.If you don`t
+        .tip-center-no-margin hear from us in the next 15 minutes,please check your spam folder. 
+        .back-to-login.go-to-login Go back to Login
+append scripts
+  script(src="/plugins/jquery/dist/jquery.min.js")
+  script(src='/thirtyPart/security.js')
+  script(src='/common/js/user.js')
+  script.
+    $('.mail-name').text(localStorage.email)

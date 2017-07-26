@@ -1,0 +1,50 @@
+extends ./userLayout
+block css
+block content
+append scripts
+    script.
+      if (plat === 1){
+        let currHref = localStorage.getItem('currHref')
+        if (currHref !== "undefined" && currHref !== null && currHref !== "null" && currHref !== "") {
+          localStorage.removeItem('currHref')
+          window.location.href = currHref
+        } else {
+          window.location.href = "/products?shopId=" + shopId + "&fb=1"
+        }
+      }
+      function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
+      }
+      var failedMsg = getQueryString("failedMsg");
+      var uaa = navigator.userAgent.toLowerCase();
+      if (failedMsg != "" && failedMsg != null) {
+        window.opener.Fshop.loginFail(failedMsg);
+      } else {
+        window.opener.Fshop.loginSuccess();
+      }
+      window.close();
+
+//      if (/iphone|ipad|ipod/.test(uaa)) {
+//      } else if (/android/.test(uaa)) {
+//      } else { //PC 端
+//        if (failedMsg != "" && failedMsg != null) {
+//          window.opener.Fshop.loginFail(failedMsg);
+//        } else {
+//          window.opener.Fshop.loginSuccess();
+//        }
+//
+//        window.close();
+      //}
+
+      // app 调用
+      function appStart() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (/iphone|ipad|ipod/.test(ua)) {
+          iOS.CloseWindow();
+        } else if (/android/.test(ua)) {
+          AndroidWebView.CloseWindow();
+        }
+      }

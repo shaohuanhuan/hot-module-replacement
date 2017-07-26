@@ -1,0 +1,31 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+  link(rel='stylesheet', href='/common/css/normal.css')
+block content
+  .container
+    .row
+      .col-md-3.col-sm-2
+      .col-md-6.col-sm-8.col-xs-12
+        .user-container
+          .user-title.user-title-big Set your new password
+          .user-form
+            .validate-wrap
+              .validate-tip.animated.fadeIn 
+                  i.glyphicon &#xe6b5;
+                  span.login-head-tip
+            .show-pwd Show password
+            .username-container.username-container-no-margin
+              input.username.user-input.validate-input(type='password',id="new-passwd",vtype='password',maxlength='20',placeholder="6-20 characters letters plus numbers only")
+              .validate-tip.animated.fadeIn 
+                  i.glyphicon &#xe6b5;
+                  span 6-20 characters(letters plus numbers only)
+            .set-passwd-btn-wrap
+              .set-passwd-btn#setNewPasswd Save
+      .col-md-3.col-sm-2
+append scripts
+  script(src="/plugins/jquery/dist/jquery.min.js")
+  script(src='/thirtyPart/security.js')
+  script(src='/common/js/user.js')

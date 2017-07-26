@@ -1,0 +1,14 @@
+ul.pagination
+  li
+    a.prev
+      i.glyphicon.glyphicon-prev
+  - for (var i=1; i<= pages; i++)
+    if(i ===  currentPage)
+      li.active(class="jump#{i}")
+        a #{i}
+    else
+      li(class="jump#{i}")
+        a #{i}
+  li
+    a.next
+      i.glyphicon.glyphicon-next

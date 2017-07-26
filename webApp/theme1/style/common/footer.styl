@@ -1,0 +1,94 @@
+.footer-container
+  margin-top 216px
+  background $footerBlack
+  background url('/images/footDefault.png')
+  // .backTop
+  //   position fixed
+  //   right 15%
+  //   bottom 30%
+  .support,.follow-us
+    margin-top 50px
+    margin-bottom 20px
+    overflow hidden
+    .title
+      color $white
+      font-size 14px
+    .context
+      color $gray
+      span
+       word-break break-all
+       text-align center
+       display inline-block
+       margin-top 5px
+       font-size 13px
+       color #a0a0a0
+       min-height 105px
+       max-height 105px
+       text-overflow: ellipsis;
+       display: -webkit-box;
+       -webkit-box-orient: vertical;
+       -webkit-line-clamp: 4;
+      a
+       text-decoration none
+       color: #A0A0A0
+      a:hover
+        color: #359AF6
+      .sup-i
+        color $mainColor
+        margin-right 10px
+        display block
+        text-align center
+      .glyphicon-location:before
+        border-bottom 1px solid #359af6
+      i
+        margin-right 30px
+      .under-line
+        //border-bottom 1px solid #359AF6
+      .location
+        //position absolute
+  .footer-menu
+    background none
+  .navbar-inverse
+    .h-foot
+       height 55px
+    .container-a
+       position relative
+       top -16px
+       a
+        color #5a5a5a
+        text-decoration none
+        margin-right 45px
+       a:hover
+        color #359af6
+    .container-top
+       border-top 1px solid #313131
+     .navbar-nav
+      li
+       a
+        color #5a5a5a
+        display inline-block
+        font-weight bold
+        font-size 14px
+       a:hover
+         color: #359AF6
+       .xline
+         color #5a5a5a
+  .discribe
+    font-size 12px
+    color $gray
+    line-height 40px
+    cursor pointer
+    .back-to-top
+       cursor pointer
+       .icon-back
+          font-size 12px
+          margin-right 5px
+@media screen and (max-width: 768px)
+  .footer-container
+    .support,.follow-us
+      margin-top 20px
+      margin-bottom 15px
+      .context
+        span
+          min-height auto
+    margin-top 69px

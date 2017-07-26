@@ -1,0 +1,55 @@
+//i.glyphicon-top.backTop.hidden-xs
+.footer-container
+  #footer-container
+    .container
+      .row
+        .support.col-sm-12.col-xs-12
+          //p.title.col-xs-12
+          p.contact.context
+            span.col-xs-12.col-sm-4
+              i.glyphicon.glyphicon-tel.sup-i
+              span.tel
+            span.col-xs-12.col-sm-4
+              i.glyphicon.glyphicon-location.sup-i
+              span.location(style='margin-top:6px')
+            span.col-xs-12.col-sm-4
+              i.glyphicon.glyphicon-email.sup-i
+              span.email
+        //.follow-us.col-sm-3.col-xs-12
+        //  p.title.col-xs-12#footer
+        //  .socail.context.icon-num.col-xs-12
+            //i.glyphicon.glyphicon-facebook
+            //i.glyphicon.glyphicon-linkedIn
+            //i.glyphicon.glyphicon-twitter
+  if (fb !== '1')
+    nav.navbar.bottom.navbar-inverse.footer-menu
+      .container.container-top.center-all.hidden-xs
+        .row.display-all.default-up
+          ul.nav.navbar-nav.center-block.col-sm-12(style='padding-right: 0')
+            if(plat != '1')
+              li
+                a(href='/?shopId=#{shopId}') HOME
+                span.xline /
+              li
+                a(href='/products?shopId=#{shopId}') PRODUCTS
+                span.xline /
+              li
+                a(href='/profile?shopId=#{shopId}') COMPANY PROFILE
+                span.xline /
+              li
+                a(href='/contacts?shopId=#{shopId}') CONTACT US
+      .col-sm-12.col-xs-12.center-all.container-a.h-foot
+        p.container.display-all.a-link.icon-num
+          //a.glyphicon.glyphicon-facebook.fb
+          //a.glyphicon.glyphicon-linkedIn.in
+          //a.glyphicon.glyphicon-twitter.tw
+    //.container.discribe
+      //p.pull-left ONLOON All Rights Reserved POWERED BY ONLOON
+      //p.pull-right.back-to-top
+        //i.glyphicon-back.pull-left.icon-back
+
+
+
+
+
+

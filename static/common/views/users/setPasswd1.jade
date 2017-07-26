@@ -1,0 +1,37 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+  link(rel='stylesheet', href='/common/css/normal.css')
+block content
+  .container
+    .row
+      .col-md-3.col-sm-2
+      .col-md-6.col-sm-8.col-xs-12
+        .user-container
+          .user-title Set your password
+          .user-form
+            .tip-center Please enter the email address you`d like your
+            .tip-center-no-margin password reset infomation sent to
+            .validate-wrap
+              .validate-tip.animated.fadeIn 
+                  i.glyphicon &#xe6b5;
+                  span.login-head-tip 
+            .username-container
+              input.username.user-input.validate-input(id='email',vtype='email',type='text', placeholder='Email Address')
+              .validate-tip.animated.fadeIn
+                i.glyphicon &#xe6b5;
+                span This is not a valid email address
+            .set-passwd-btn-wrap
+              .set-passwd-btn#reset-pwd Reset your password
+            .tip-center Go back to 
+              span.color-blue.go-to-login Log In
+            //- .captcha-container
+            //-   input.captcha(type='text', placeholder='请输入验证码',id='captcha')
+            //-   img(src='https://server.onloon.com.cn/buyer/forget/captcha/get')  
+      .col-md-3.col-sm-2
+append scripts
+  script(src="/plugins/jquery/dist/jquery.min.js")
+  script(src='/thirtyPart/security.js')
+  script(src='/common/js/user.js')

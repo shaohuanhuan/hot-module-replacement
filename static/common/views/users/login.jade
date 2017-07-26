@@ -1,0 +1,49 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+  link(rel='stylesheet', href='/common/css/normal.css')
+block content
+  .container
+    .row
+      .col-md-3.col-sm-2
+      .col-md-6.col-sm-8.col-xs-12
+        .user-container
+          .user-title Login
+          .user-form
+            .validate-wrap
+              .validate-tip.animated.fadeIn 
+                  i.glyphicon &#xe6b5;
+                  span.login-head-tip    
+            .username-container
+              input.username.user-input.validate-input#email(type='text', placeholder='Email Address',vtype='email')
+              .validate-tip.animated.fadeIn
+                i.glyphicon &#xe6b5;
+                span This is not a valid email address           
+            .forget-passwd.hidden-xs
+              span.forgot Forgot my password? 
+            .forget-passwd.visible-xs
+              span.forgot Forgot? 
+            .password-container
+              input.password.user-input.validate-input#passwd(type='password', placeholder='Password',vtype='password',maxlength='20')
+              .validate-tip.animated.fadeIn
+                i.glyphicon &#xe6b5;
+                span 6-20 characters(letters or numbers only)
+            .remember
+                input#check(type='checkbox')
+                span.remember-text Remember me
+            .login-btn-wrap
+              .login-btn#login-btn Log in
+            .or-hr
+              .or-text or  
+            .social-login-wrap 
+              .facebook-login
+                .logo-left
+                  span f
+                .text-right Sign in with facebook    
+      .col-md-3.col-sm-2
+append scripts
+  script(src="/plugins/jquery/dist/jquery.min.js")
+  script(src='/thirtyPart/security.js')
+  script(src='/common/js/user.js')

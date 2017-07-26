@@ -1,0 +1,198 @@
+.btn-blue,.btn-send
+  width 200px
+  height 35px
+  line-height 35px
+  text-align center
+  color $white
+  background $mainColor
+  border 0
+  word-break break-all
+.btn-blue:hover,.btn-send:hover
+  background #99ccfb
+.btn-blue-trans
+  font-weight 600
+  padding 10px 30px
+  background $white
+  border 2px solid $mainColor
+  color $mainColor
+.btn-blue-trans:hover
+  background $mainColor
+  color $white
+.btn-black-trans
+  display inline-block
+  // padding 12px 30px
+  height 50px
+  line-height 50px
+  background $white
+  border 2px solid #000
+  color #000
+  font-size 1.6rem
+  font-weight bold
+  text-align center
+.btn-black-trans:hover
+  background $white
+  border 2px solid $mainColor
+  color $mainColor
+.btn-send
+    margin 0 auto
+    display block
+    height 50px
+    line-height 50px
+.btn-send[disabled]
+    background-color $whiteOO
+    color #ccc
+    border 2px solid #D9D9D9
+.ui-select,.ui-input
+  padding 6px 12px
+  width 100%
+  height 40px
+  -webkit-appearance none
+  background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsklEQVQ4T2NkoBAwUqifYZAYMH369ARGRsZ4Urzz////hZmZmQvAXpg/f77Az58/DzAyMuoTY8j///8vZmRkGIDUwsOAWENAmtnZ2R0SExM/oBhAjEvQNWMYABKYPn26AhMT0wUGBgZ+NO98ZGRkdEhLSwPJwQHWaJw1a5bB////DyAZglUzVhfAjEY25N+/f46ZmZkgAzEA3oQ0c+bMgH///gmAogtX7AySlEhM4qGZFwDG9EwR60u4QgAAAABJRU5ErkJggg==")
+  background-repeat no-repeat 
+  background-position 98% center
+  border-radius 0
+  border 0
+  background-color #f2f2f2
+  color #666
+.ui-select:hover
+  border 1px solid $mainColor 
+  background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifYZAYYDrre8J/hv/xpHiHkYFx4ek0zgVgLxjM/y/A+uvbAQZGRn2iDPn//+LpdG4DkFp4GBBtyP//F3+zcTlcSGT8gGIAUS5B04xhANiQ6d8VWJj+XWBkZORH9s7///8/MjKyOpxOY7uALI41Gk1n/TL4///3AZghuDRjdQHMdGRD/jMyOp5J5TyALYDxJiTjmV8DmBiZBEDRhSt2BklKJCrx4FBEsRcAfxZJESh0fIsAAAAASUVORK5CYII=")
+.ui-input
+  background-image none 
+.pagination>li
+  display inline-block
+  margin 0 5px
+.pagination>li>a,.pagination>li>span
+  padding 0
+  width 28px
+  height 28px
+  line-height 28px
+  text-align center
+  color #666
+.pagination>li:first-child>a, .pagination>li:first-child>span,
+.pagination>li:last-child>a, .pagination>li:last-child>span
+  border-radius 0
+  span
+    font-size 14px
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus
+  border 1px solid $mainColor
+  color $mainColor
+  background $white
+  cursor pointer
+.pagination>.active>a, .pagination>.active>span
+   background-color $mainColor
+   border-color $mainColor
+/* 表单 focus加样式.form-group-focus;blur 去掉focus样式 根据是否输入 添加form-group-min样式
+   验证样式error*/
+.valid-form
+  .form-group
+      label
+          position absolute
+          top 16px
+          width 110px
+          font-size 14px
+          color #2a2a2a
+          font-weight normal
+  .form-group.form-group-focus
+     border-color $mainColor 
+     label
+         top 3px
+         font-size 12px
+         color $mainColor
+  .form-group-min
+     label
+         top 3px
+         font-size 12px
+.validate-tip
+  display none
+.error
+  border-color #FE4C40 !important
+  label
+      span
+          color #FE4C40
+  .validate-tip
+     display block
+     min-height 18px
+     padding 10px
+     background-color #FFEEE6
+     color #FE4C40
+     i[class^="glyphicon"]
+         margin-right 6px
+// 提示框
+.alert
+    position fixed
+    top 150px
+    left 50%
+    margin-left -242px
+    width 585px
+    padding 4px 0 4px 15px
+    color #666
+    word-break break-all
+    border-radius 4px
+    i
+      margin-right 10px
+      font-size 14px
+.alert-success
+   border 1px solid #e3f4db
+   background-color #f3faf0
+.alert-info
+   border 1px solid #cfe8fa
+   background-color #e7f3fc
+.alert-warning
+   border 1px solid #fec
+   background-color #FFFAEA
+//products hover 样式
+.img-container:hover
+  img
+    transform scale(1.2)
+  .hover-container
+    display block
+  .learn-more
+    display inline-block
+.hover-container
+  display none
+  width 100%
+  height 100%
+  background $grayOO
+  position absolute
+  opacity 0.5
+.learn-more
+  display none
+  position absolute
+  width 50%
+  top 45%
+  left 25%
+  box-shadow:0 0 10px rgba(53, 154, 246, .8)
+  text-decoration none
+  cursor pointer
+@media screen and (max-width: 480px)
+  .alert
+    left 5%
+    margin-left 0
+    width 80%
+@media screen and (min-width: 1200px)
+  .container
+    width 1200px
+// 富文本-表格-展示样式
+.simditor-table 
+  position relative
+  word-wrap break-word
+  margin 0 0 15px 0
+  color #333
+  word-wrap break-word
+  table 
+    width 100%
+    table-layout fixed
+    border-collapse collapse
+    border-spacing 0
+    margin 15px 0
+    thead
+      background-color #f9f9f9
+    td,th
+      min-width 40px
+      height 30px
+      border 1px solid #ccc
+      vertical-align top
+      padding 2px 4px
+      text-align left
+      box-sizing border-box

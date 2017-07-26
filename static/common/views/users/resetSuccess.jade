@@ -1,0 +1,18 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+block content
+  .container
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        .tip-center
+          img(src="/images/login/success.svg",class="success-icon")
+        .success-title Success
+        .tip-center That`s mighty fine password
+        .tip-center-no-margin Signing you in now.
+append scripts
+  script(src="/plugins/jquery/dist/jquery.min.js")
+  script(src='/thirtyPart/security.js')
+  script(src='/common/js/user.js')

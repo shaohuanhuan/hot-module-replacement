@@ -1,0 +1,19 @@
+ul.drop-hidden-menu
+  each group in groups
+    if(group.subGroup && group.subGroup.length)
+      li.drop-menu-2
+        
+        a(href='/products?shopId=#{shopId}&groupId=#{group.id}',title='#{group.name}') #{group.name}
+          i.glyphicon.glyphicon-chevron-right.hidden-xs
+        ul.drop-hidden-menu-2.hidden-xs
+          each gp in group.subGroup
+            li
+              a(href='/products?shopId=#{shopId}&groupId=#{gp.id}',title='#{gp.name}') #{gp.name}
+        ul.drop-hidden-menu-2.visible-xs
+          .row
+            each gp in group.subGroup
+              li.col-xs-4
+                a(href='/products?shopId=#{shopId}&groupId=#{gp.id}',title='#{gp.name}') #{gp.name}
+    else
+      li
+        a(href='/products?shopId=#{shopId}&groupId=#{group.id}',title='#{group.name}') #{group.name}

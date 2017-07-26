@@ -1,0 +1,49 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+  link(rel='stylesheet', href='/common/css/normal.css')
+block content
+  .container
+    .row
+      .col-md-3.col-sm-2
+      .col-md-6.col-sm-8.col-xs-12
+        .user-container
+          .user-title Creat your account
+          .user-form
+            .validate-wrap
+              .validate-tip.animated.fadeIn 
+                  i.glyphicon &#xe6b5;
+                  span.login-head-tip
+            .username-container
+              input.username.user-input#email.validate-input(type='text', placeholder='Email Address',vtype='email')
+              .validate-tip.animated.fadeIn 
+                i.glyphicon &#xe6b5;
+                span This is not a valid email address
+            .forget-passwd.hidden-xs
+              .show-passwd Show password
+            .forget-passwd.visible-xs
+              .show-passwd Show password 
+            .password-container
+              input.password.user-input.validate-input#new-passwd(type='password', placeholder='Password',vtype='passwordreg',maxlength='20')
+              .validate-tip.animated.fadeIn 
+                i.glyphicon &#xe6b5;
+                span  6-20 characters(letters plus numbers only)
+            .confirm-password-container
+              input.confirm-password.user-input.validate-input#confirm-new-passwd(type='password', placeholder='Confirm Password',value = '',vtype='passwordConfirm',maxlength='20')
+              .validate-tip.animated.fadeIn 
+                i.glyphicon &#xe6b5;
+                span  The password is inconsistent 
+            .tip-center By creating a account, you're agreeing to accept the 
+            .tip-iterm.onloon-service onloon Items of services
+            .register-btn-wrap
+              .register-btn#register Register
+            //- .captcha-container
+            //-   input.captcha(type='text', placeholder='请输入验证码',id='captcha')
+            //-   img(src='https://server.onloon.com.cn/buyer/register/captcha/get')  
+      .col-md-3.col-sm-2
+append scripts
+  script(src="/plugins/jquery/dist/jquery.min.js")
+  script(src='/thirtyPart/security.js')
+  script(src='/common/js/user.js')

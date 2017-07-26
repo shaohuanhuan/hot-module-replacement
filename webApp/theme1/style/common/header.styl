@@ -1,0 +1,329 @@
+@import "color.styl"
+@import "homeEditor.styl"
+.navbar
+  min-height 40px
+  margin-bottom 0
+.header
+  background $white
+  .container-no-padding
+    padding-left 0
+    padding-right 0
+  .top
+    position relative
+    height 100px
+    line-height 100px
+    .logo-img-loading
+      height 75px
+      width 200px
+      background $grayOOO
+      margin-top 12px
+      display inline-block
+    .logo-img
+      display none
+      width 300px
+      height 100px
+      background-position center
+      background-repeat no-repeat
+    // .logo-default
+    //   width 300px
+    //   height 100px
+    .social-container
+      position absolute
+      top: 0
+      right 20px
+      font-size 16px
+      line-height 115px
+      a
+       text-decoration none
+      i
+        font-size 21px
+        margin-left 30px
+        color #D8D8D8
+      i:hover
+        color: grey
+  .bottom
+    background $white
+    border-radius 0
+    z-index 499
+    .caret
+      margin-left 5px
+    .navbar-header
+      .search-input
+        height 40px
+        border none
+        background $whiteOO
+        input
+          background $whiteOO
+          border none
+          border-radius 0
+          height 40px
+        span
+          border none
+          background $whiteOO
+      button
+        padding: 6px 10px
+        margin 5px 0 0 0
+        font-weight bold
+        border none
+        .menu-close
+          display none
+        .menu-bar
+          font-size 14px
+          vertical-align bottom
+          display inline-block
+          margin-right 10px
+          width 30px
+        .menu-text
+          vertical-align text-bottom
+      button:focus
+        border none
+        background none
+      button:hover
+        border none
+        background none
+    ul > li
+      a
+        color #000
+        padding 18px 0
+      a:hover
+        cursor pointer
+        color $mainColor
+      .search-bar
+        color #666666
+        font-size 17px
+    ul.navbar-nav
+      position relative
+      padding-right 0
+      li.drop-menu:hover
+        .drop-hidden-menu
+          height auto
+          // opacity 1
+          display block
+          overflow visible
+      li.drop-menu
+        position relative
+        .drop-hidden-menu
+          position absolute
+          margin-top -4px
+          max-width 350px
+          min-width 150px
+          height 0
+          padding 0
+          border-top 4px solid $mainColor
+          background $grayOOO
+          z-index 99
+          display none
+          // opacity 0
+          // transition opacity 0.2s ease
+          li.drop-menu-2:hover
+            .drop-hidden-menu-2
+              width 100%
+              // margin-left 150px
+              margin-left 100%
+              margin-top -35px
+              height auto
+              // opacity 1
+              display block 
+          li
+            a
+              position relative
+              display inline-block
+              padding 10px 5% 10px 10px
+              width 94%
+              height 40px
+              font-weight normal
+              color $black
+              word-break break-all
+              overflow hidden
+              white-space nowrap
+              text-overflow ellipsis
+              i
+                position absolute
+                right 2px
+                top 11px
+                font-size 12px
+                float right
+            .drop-hidden-menu-2
+              position absolute
+              width 0
+              height 45px
+              padding 0
+              border-top 4px solid $mainColor
+              background $grayOOO
+              z-index 999
+              overflow hidden
+              // opacity 0
+              display none
+              // transition opacity 0.2s ease
+            a:hover
+              color $mainColor
+              text-decoration none
+      li.hidden-search
+        z-index 9
+        display none
+        animation-duration 0.2s
+        position absolute
+        top 9px
+        left 44px
+        .input-group
+          position relative
+          input
+            height 42px;
+            border-color $grayOO
+          .search-btn
+            position absolute
+            top 11px
+            right 45px
+            z-index 99
+          span
+            cursor pointer
+            color $gray
+            font-size 20px
+            border 0
+            background #fff
+      li:last-child
+        margin-right 0
+      li.active
+        border-bottom 5px solid $mainColor
+        a
+          font-weight bold
+          background none
+          color $mainColor
+          padding-left 0
+          padding-right 0
+        a:hover
+          color $mainColor
+          background none
+      .line-li
+        margin 0 29px
+        padding-top 17px
+        .line
+          display inline-block
+          height 25px
+          width 1px
+          background $grayOO
+      .user-opration,.user-loged
+        color $blackO
+        display none
+        line-height 60px
+        a
+          color $blackO
+        span
+          margin 0 7px
+        i
+          margin-right 6px
+        .username
+          width: 40px
+          display inline-block
+          white-space nowrap
+          overflow hidden
+          text-overflow: ellipsis
+          line-height 10px
+          padding 0
+// 回顶部
+.backTop
+  position fixed
+  right 200px
+  bottom 320px
+  color #d8d8d8
+  opacity 0
+  visibility hidden
+  -webkit-transition opacity .3s 0s, visibility 0s .3s
+  -moz-transition opacity .3s 0s, visibility 0s .3s
+  transition opacity .3s 0s, visibility 0s .3s
+  &.retop
+    visibility visible
+    opacity 1
+  &.glyphicon-top
+    font-size 40px
+  &:hover
+    color #359AF6
+@media screen and (max-width: 767px)
+  .header
+    .top
+      height 80px
+      line-height 0
+      .logo-img
+        // height 60px
+        // margin-top 10px
+      .logo-default
+        // height 20px
+        // margin-top 30px
+    .bottom
+      .input-blue
+        box-shadow 0 0 8px rgba(102, 175, 233, 0.6)
+      ul.navbar-nav
+        li
+          a
+            padding 10px 10px
+        #xs-list
+          a
+            display inline-block
+            padding 10px 19px
+        li.drop-menu,li.drop-menu:hover
+          .drop-hidden-menu
+            background $white
+            opacity 1
+            height auto
+            position static
+            border-top none
+            width 100%
+            li.drop-menu-2,li.drop-menu-2:hover
+              word-break break-all
+              background $white
+              border-top 1px solid $grayOO
+              margin-left 10px
+              margin-right 10px
+              a
+                padding-left 10px
+                word-break break-all
+              .drop-hidden-menu-2
+                margin-top 0
+                height auto
+                opacity 1
+                padding-left 20px
+                padding-right 20px
+                background $white
+                margin-left 0
+                position static
+                border-top none
+                width 100%
+                a
+                  background $loadingBg
+                  border-radius 4px
+                  text-align center
+                  margin-bottom 7px
+        li.active
+          border-bottom none
+          a
+            padding 10px 10px
+        li.user-li
+          background $loadingBg
+          float left !important
+          width 100%
+          z-index 99
+          .user-opration,.user-loged
+            margin-left 10px
+            line-height 40px
+            a
+              padding 0
+        li
+          .social-container
+            color $grayO
+            display inline-block
+            text-decoration none
+            i
+              font-size 18px
+@media screen and (min-width: 1200px)
+  .container
+    width 1200px
+@media screen and (max-width: 768px)
+  .no-margin
+    margin-left 0
+    margin-right 0
+  .header
+    .bottom
+      ul.navbar-nav
+        li.drop-menu
+          .drop-hidden-menu
+            display block

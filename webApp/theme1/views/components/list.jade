@@ -1,0 +1,20 @@
+if(index)
+  .p-list.col-md-3.col-sm-4.col-xs-6
+    a.item-container(href='/detail?shopId=#{shopId}&productId=#{productId}')
+      .img-container
+        img(src='#{src}')
+        .hover-container
+        span.learn-more.btn-blue.btn-on LEARN MORE
+      .p-title #{desc}
+  if(i)
+    .clear(style='clear:both')
+else
+  .p-list.col-sm-4.col-xs-6
+    a.item-container(href='/detail?shopId=#{shopId}&productId=#{productId}')
+      .img-container
+        img(src='#{src}')
+        .hover-container
+        span.learn-more.btn-blue.btn-on LEARN MORE
+      .p-title #{desc}
+  if(i)
+    .clear(style='clear:both')

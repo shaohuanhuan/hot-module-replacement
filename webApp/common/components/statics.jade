@@ -1,0 +1,126 @@
+script.
+  var domain = '#{apiHost}'
+    kjax(domain+'/buyer/analysis/info?shopId='+window.shopId, 'GET', function (cb) {
+      console.log(cb)
+      var faString = cb.data.facebook  
+      var googleString = cb.data.google 
+      if (faString) {!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq = function () {n.callMethod ?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', faString);fbq('track', 'PageView'); } if (googleString){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', googleString, 'auto'); ga('send', 'pageview'); } })
+    
+    /**
+     * ajax方法
+     * @param  {[type]}   url      [description]
+     * @param  {[type]}   method   [description]
+     * @param  {Function} callback [description]
+     * @return {[type]}            [description]
+     */
+    function kjax(url, method, callback) {
+      var xmlhttp = new XMLHttpRequest();
+      if (xmlhttp) {
+        xmlhttp.open(method, url, true);
+        xmlhttp.withCredentials = true;
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var response = JSON.parse(xmlhttp.responseText)
+            callback(response)
+          }
+        };
+        xmlhttp.send();
+      }
+    }
+noscript.
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=264282400723956&ev=PageView&noscript=1">     
+script.
+  var analyzeDomain = '#{analyzeDomain}'
+  /**
+   domain 是 string  域名
+  url 是 string  相对链接
+  pageTitle 是 string  页面标题
+  referrer  否 string  前一页面链接
+  shopId  是 string  店铺ID
+  pageId  是 string  页面ID    ====>todo
+  viewFrom  否 string  来源    
+  productId 否 string  商品ID   
+  platform  是 byte  平台(b2b-买家为0)
+         * @type {Object}
+     */
+  var params = {};
+  //Document对象数据
+  if (document) {
+    params.domain = document.domain || '';
+    params.url = document.URL || '';
+    params.pageTitle = document.title || '';
+    params.referrer = document.referrer || '';
+  }
+  //Window对象数据
+  if (window && window.screen) {
+    params.sh = window.screen.height || 0;
+    params.sw = window.screen.width || 0;
+    params.cd = window.screen.colorDepth || 0;
+    params.shopId = window.shopId || '';
+    params.productId = getQueryString('productId') || '';
+    params.viewFrom = getQueryString('viewFrom') || '';
+    //- 标识来自facebook
+    if (plat === 1) {
+      params.viewFrom = 1
+    }
+    params.pageId = '#{pageCode}' || '';
+  }
+  //navigator对象数据
+  if (navigator) {
+    params.lang = navigator.language || '';
+  }
+  //拼接参数串
+  var args = '';
+  for (var i in params) {
+    if (args != '') {
+      args += '&';
+    }
+    args += i + '=' + encodeURIComponent(params[i]);
+  }
+  var url = analyzeDomain + '/collection/pageview?platform=0&' + args
+    /**
+     * 发送PV 以及统计数据
+     */
+  kjax(url, 'GET', heartBeat)
+    /**
+     * 保持心跳
+     * @param  {[type]} data [description]
+     * @return {[type]}      [description]
+     */
+  function heartBeat(data) {
+    var pvid = data.data.pageViewId
+    kjax(analyzeDomain+'/collection/heartbeat?pageViewId=' + pvid, 'GET', function() {})
+    var timeoutId = window.setInterval(function() {
+      kjax(analyzeDomain+'/collection/heartbeat?pageViewId=' + pvid, 'GET', function() {})
+    }, 10000)
+  }
+  /**
+   * ajax方法
+   * @param  {[type]}   url      [description]
+   * @param  {[type]}   method   [description]
+   * @param  {Function} callback [description]
+   * @return {[type]}            [description]
+   */
+  function kjax(url, method, callback) {
+    var xmlhttp = new XMLHttpRequest();
+    if (xmlhttp) {
+      xmlhttp.open(method, url, true);
+      xmlhttp.withCredentials = true;
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText)
+          callback(response)
+        }
+      };
+      xmlhttp.send();
+    }
+  }
+
+  function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+      return unescape(r[2]);
+    }
+    return null;
+  }

@@ -1,0 +1,27 @@
+extends ./userLayout
+block css
+  link(rel="stylesheet", href="/thirtyPart/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/plugins/animate.css/animate.min.css")
+  link(rel='stylesheet', href='/common/css/login/login.css')
+  link(rel='stylesheet', href='/common/css/normal.css')
+  link(rel='stylesheet', href='/thirtyPart/font/iconfont.css')
+block content
+  .error_page
+    .center_model
+      .conent
+        .left
+          svg.icon.light(aria-hidden='true')
+            use(xlink:href="#icon-ICON")
+        .right
+          span.glyphicon-404.font404
+          p.desc 很抱歉，没有找到您要访问的页面
+          .error
+            .label_desc 可能原因
+            ul.error_prompt
+              li 网络信号不好
+              li 找不到请求页面
+              li 输入网址不正确
+          p.back_btn 返回
+            i.glyphicon-Path(onclick='window.history.back()')
+append scripts
+  script(src="/thirtyPart/font/iconfont.js")

@@ -1,0 +1,316 @@
+input-height = 60px
+html 
+	height 100%
+body
+	background url(/images/login/bg.jpg) bottom
+	background-size cover
+	height 100%
+	font-family HelveticaNeue
+.user-container
+	padding 50px 40px 80px 40px
+	border 1px solid #E8E8E8
+	background white
+	box-shadow 0 5px 6px rgba(0, 0, 0, 0.08)
+	border-radius 6px
+	margin-top 100px
+.user-title
+	font-size 38px
+	color #33475B
+	font-weight bold
+	text-align center
+.user-form .user-input
+	height input-height
+	line-height input-height
+	background #F5F8FA
+	border-radius 4px
+	border none
+	box-shadow none
+	width 100%
+	padding 0 16px
+	font-size 14px
+.username-container
+	margin-top 30px	
+.username-container-no-margin
+	margin-top 0
+.confirm-password-container
+	margin-top 16px	
+.forget-passwd
+	text-align right
+	padding 12px 0	
+	color #7C98B6
+	.forgot
+		cursor pointer
+	.forgot:hover
+		text-decoration:underline
+	.show-passwd
+		cursor pointer
+	.show-passwd:hover
+		text-decoration:underline
+.user-form input::-webkit-input-placeholder
+	color #7C98B6
+.user-form input::-moz-placeholder
+	color #7C98B6
+.user-form input::-ms-input-placeholder
+	color #7C98B6
+.remember
+	padding 12px 0
+	position relative
+	#check
+		width 15px
+		height 15px
+		position absolute
+		top 11px
+		left 0
+		-webkit-appearance: none
+		border: 2px solid #ccc
+		border-radius: 2px
+		outline:none
+	#check.glyphicon-checked:before
+		content '\e626'
+		position: absolute;
+		top: 0;
+		left: 0px;
+		font-size: xx-small;
+		color: #fff;
+		background: #359AF6;
+		width: 12px;
+		height: 12px;
+	.remember-text
+		margin-left 21px
+		color #33475B
+		font-size 14px
+		font-weight 400
+.login-btn-wrap
+	margin-top 50px
+	.login-btn
+		width 100%
+		height input-height
+		line-height input-height
+		background #EAF0F6
+		border solid 2px #CBD6E2
+		color #B0C1D4
+		text-align center
+		font-size 20px
+		border-radius 4px
+		cursor pointer
+		font-weight bold
+	.login-btn.able
+		background #FE4C40
+		color white
+		border none
+.set-passwd-btn-wrap
+	margin-top 30px
+	.set-passwd-btn
+		width 100%
+		height input-height
+		line-height input-height
+		background #EAF0F6
+		border solid 2px #CBD6E2
+		color #B0C1D4
+		text-align center
+		font-size 20px
+		border-radius 4px
+		cursor pointer
+		font-weight 600
+	.set-passwd-btn.able
+		background #FE4C40
+		color white
+		border none
+.register-btn-wrap
+	margin-top 50px
+	.register-btn
+		width 100%
+		height input-height
+		line-height input-height - 1
+		background #EAF0F6
+		border solid 2px #CBD6E2
+		color #B0C1D4
+		text-align center
+		font-size 20px
+		border-radius 4px
+		cursor pointer
+		font-weight 600
+	.register-btn.able
+		background #FE4C40
+		color white
+		border none	
+.or-hr
+	margin-top input-height
+	border-top 1px solid #DFE3EB
+	text-align center
+	.or-text
+		display inline-block
+		background white
+		width 50px
+		height 26px
+		position relative
+		top -10px
+.facebook-login
+	height input-height
+	line-height input-height
+	background #527FE4
+	color white
+	border-radius 4px
+	overflow hidden
+	cursor pointer
+	.logo-left, .text-right
+		font-size 20px
+		display inline-block
+		text-align center
+	.logo-left
+		font-size 28px
+		font-weight 600
+		width 13%
+		background #4572D9
+	.text-right
+		width 85%
+		text-align center
+.tip-center
+	text-align center
+	color #33475B
+	margin-top 15px
+	.go-to-login:hover
+		text-decoration:underline
+.tip-center-no-margin
+	text-align center
+	color #33475B
+.show-pwd
+	text-align right
+	margin 40px	0 6px 0
+	color #7C98B6
+	cursor pointer
+.tip-center-no-margin
+	text-align center	
+.tip-iterm
+	color #03b3ff
+	text-align center
+	cursor pointer
+.onloon-service:hover
+	text-decoration:underline
+.color-blue
+	color #03b3ff
+	cursor pointer
+.color-yellow
+	color #ffce54	
+.success-icon
+	width 240px	
+	margin-top 240px
+.success-title
+	font-size 26px
+	color #33475B
+	font-weight bold	
+	text-align center
+	margin-top 50px
+.success-title-no-margin
+	font-size 26px
+	color #33475B
+	font-weight bold	
+	text-align center
+.back-to-login
+	width 200px
+	height 40px
+	line-height 40px
+	border-radius 4px	
+	background #EC680C
+	background -webkit-gradient(linear, left center, right center, from(#FE4C40), to(#EC680C))
+	color white
+	text-align center
+	margin 50px auto
+	cursor pointer
+.p
+	margin-top 5px	
+.text-container
+	border 1px solid #DFE3EB
+	padding 30px 67px
+	margin-top 40px
+	position relative
+.line
+	border-top 1px solid #DFE3EB
+	border-bottom 4px solid #DFE3EB
+	height 8px
+	margin 16px auto
+.close
+	position absolute
+	right 21px
+	top 21px
+	font-size 24px
+// 效验部分 代码提示	
+.validate-tip
+	font-size 12px
+	background #FFEEE6
+	color #F44336
+	padding 8px 12px
+	border-radius 4px
+	display none
+	.login-head-tip
+		display inline-block
+		width 90%
+		vertical-align top
+		margin-left:3%
+.error .validate-tip
+	display block	
+.username-container.error, .password-container.error, .confirm-password-container.error
+	border 1px solid #FE4C40
+	border-radius 4px
+.validate-wrap
+	margin-top 20px		
+@media (max-width: 768px)
+	input-height = 37.5px
+	.validate-wrap
+		margin-top 10px
+	.or-hr
+		margin-top input-height
+		.or-text
+			height 17px
+	.user-title
+		font-size 19px
+	.user-title-big
+		font-size 25px
+	.show-pwd
+		margin 20px 0 3px 0
+		font-size 12px
+	.login-btn-wrap
+		margin-top input-height
+		.login-btn
+			height input-height
+			line-height input-height
+			font-size 12px
+	.remember-text
+		font-size 12px
+	.tip-center
+		font-size 12px
+	.tip-center-no-margin
+		font-size 12px
+	.tip-iterm
+		font-size 12px
+	.register-btn-wrap
+		margin-top 37.5px
+		.register-btn
+			height input-height
+			line-height input-height
+			font-size 12px
+	.set-passwd-btn-wrap
+		margin-top 19px
+		.set-passwd-btn
+			height input-height
+			line-height input-height
+			font-size 12px
+	.facebook-login
+		height input-height
+		line-height input-height
+		.logo-left
+			font-size 16px
+		.text-right
+			font-size 12px
+	.user-container
+		padding 25px 20px 40px 20px
+	.user-form .user-input
+		font-size 12px
+		height input-height
+		line-height input-height
+	.success-icon
+		margin-top 100px					
+@media (min-width: 768px) and (max-width: 992px) {}
+@media (min-width: 992px) and (max-width: 1200px) {}
+@media (min-width: 1200px) {}
+					
