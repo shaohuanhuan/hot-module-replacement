@@ -1,8 +1,9 @@
 
 ```
  这是一个jade+node的项目，实现HMR没有用webpack-dev-server（小型express服务器）,
- ```
- ```而是直接在node上实现的，加上webpack的多入口，比教科书上的HMR实现多了一点难度
+```
+```
+而是直接在node上实现的，加上webpack的多入口，比教科书上的HMR实现多了一点难度
 ``` 
 ```javascript
 npm install
